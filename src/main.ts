@@ -5,7 +5,7 @@ async function bootstrap() {
 	const app = await NestFactory.create(AppModule)
 	app.enableCors({
 		credentials: true,
-		origin: ['http://localhost:3000', 'https://vercel.com']
+		origin: ['http://localhost:3000', 'https://shop-mdk7.onrender.com']
 	})
 
 	app.setGlobalPrefix('api')

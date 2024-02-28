@@ -1,26 +1,45 @@
 {
 	"development": {
-		"username": "postgres",
-		"password": "12345",
-		"database": "shop-04-06",
-		"host": "localhost",
+		"username": "default",
+		"password": "aW3lDhJ4OdFU",
+		"database": "verceldb",
+		"host": "ep-ancient-snow-a2oq2uic-pooler.eu-central-1.aws.neon.tech",
 		"dialect": "postgres",
-		"port": 5432
+		"port": 5432,
+		"ssl": true,
+		"dialectOptions": {
+			"ssl": {
+				"require": true
+			}
+		}
 	},
+
 	"test": {
-		"username": "postgres",
-		"password": "12345",
-		"database": "shop-04-06",
-		"host": "localhost",
+		"username": "default",
+		"password": "aW3lDhJ4OdFU",
+		"database": "verceldb",
+		"host": "ep-ancient-snow-a2oq2uic-pooler.eu-central-1.aws.neon.tech",
 		"dialect": "postgres",
-		"port": 5432
+		"port": 5432,
+		"ssl": true,
+		"dialectOptions": {
+			"ssl": {
+				"require": true
+			}
+		}
 	},
 	"production": {
-		"username": "postgres",
-		"password": "12345",
-		"database": "shop-04-06",
-		"host": "localhost",
+		"username": "default",
+		"password": "aW3lDhJ4OdFU",
+		"database": "verceldb",
+		"host": "ep-ancient-snow-a2oq2uic-pooler.eu-central-1.aws.neon.tech",
 		"dialect": "postgres",
-		"port": 5432
+		"port": 5432,
+		"ssl": true,
+		"dialectOptions": {
+			"ssl": {
+				"require": true
+			}
+		}
 	}
 }
