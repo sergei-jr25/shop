@@ -1,4 +1,9 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common'
+import {
+	HttpException,
+	HttpStatus,
+	Injectable,
+	NotFoundException
+} from '@nestjs/common'
 import { InjectRepository } from '@nestjs/typeorm'
 import { Between, ILike, In, Repository } from 'typeorm'
 import { createDtoBolier } from './dto/createDto'
@@ -73,10 +78,20 @@ export class BoilerPartsService {
 			where: { new: true }
 		})
 	}
-	async findOne(id: number) {
+	async getById(id: number) {
 		return await this.boilerPartsRepository.findOne({
 			where: { id }
 		})
+	}
+	async getBySlug(name: string) {
+		const product = await this.boilerPartsRepository.findOne({
+			where: { name }
+		})
+		if (!product) {
+			throw new NotFoundException('product not found')
+		}
+
+		return product
 	}
 	async findBySearchName(searchTerm?: string) {
 		const part = await this.boilerPartsRepository.find({

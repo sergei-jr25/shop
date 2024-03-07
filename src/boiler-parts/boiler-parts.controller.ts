@@ -49,8 +49,12 @@ export class BoilerPartsController {
 
 	// @UseGuards(AuthGuard)
 	@Get(':id')
-	getOne(@Param('id') id: string) {
-		return this.boilerPartsService.findOne(+id)
+	getById(@Param('id') id: string) {
+		return this.boilerPartsService.getById(+id)
+	}
+	@Get('by-slug/:slug')
+	getBySlug(@Param('slug') slug: string) {
+		return this.boilerPartsService.getBySlug(slug)
 	}
 	@Post('boiler')
 	createBoiler(@Body() dto: createDtoBolier) {
