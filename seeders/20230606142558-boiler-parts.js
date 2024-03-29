@@ -1,4 +1,5 @@
 const { faker } = require('@faker-js/faker')
+const image  = require('./uploads/default/indiana.png')
 
 ;('use strict')
 
@@ -41,7 +42,7 @@ module.exports = {
 				price: faker.number.int({ min: 1000, max: 40000 }),
 				name: faker.lorem.sentence(2),
 				description: faker.lorem.paragraph(),
-				images: faker.image.urlLoremFlickr({ category: 'business' }),
+				images: image,
 				vendor_code: faker.internet.password(),
 				in_stock: faker.number.int({ max: 100 }),
 				bestsellers: faker.datatype.boolean(),

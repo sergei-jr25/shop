@@ -109,6 +109,10 @@ export class AuthService {
 		return { refreshToken, accessToken }
 	}
 
+	async chagngeUser(id: number) {
+		const user  = await this.userRepository.find({where: {id}})
+	}
+
 	returnUserFields(user: UserEntity) {
 		return {
 			id: user.id,
