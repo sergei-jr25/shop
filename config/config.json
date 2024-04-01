@@ -1,7 +1,7 @@
 {
 	"development": {
 		"username": "default",
-		"password": "aW3lDhJ4OdFU",
+		"password": "H1aXgw0fzqlj",
 		"database": "verceldb",
 		"host": "ep-ancient-snow-a2oq2uic-pooler.eu-central-1.aws.neon.tech",
 		"dialect": "postgres",
@@ -16,7 +16,7 @@
 
 	"test": {
 		"username": "default",
-		"password": "aW3lDhJ4OdFU",
+		"password": "H1aXgw0fzqlj",
 		"database": "verceldb",
 		"host": "ep-ancient-snow-a2oq2uic-pooler.eu-central-1.aws.neon.tech",
 		"dialect": "postgres",
@@ -30,7 +30,7 @@
 	},
 	"production": {
 		"username": "default",
-		"password": "aW3lDhJ4OdFU",
+		"password": "H1aXgw0fzqlj",
 		"database": "verceldb",
 		"host": "ep-ancient-snow-a2oq2uic-pooler.eu-central-1.aws.neon.tech",
 		"dialect": "postgres",

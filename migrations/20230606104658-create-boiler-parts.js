@@ -15,7 +15,7 @@ module.exports = {
 			boiler_manufacturer: { type: Sequelize.STRING },
 			price: { type: Sequelize.INTEGER },
 			parts_manufacturer: { type: Sequelize.STRING },
-			vendorCode: { type: Sequelize.STRING },
+			vendor_code: { type: Sequelize.STRING },
 			description: { type: Sequelize.STRING(2048) },
 			images: { type: Sequelize.STRING(2048) },
 			bestsellers: { type: Sequelize.BOOLEAN },
@@ -23,11 +23,11 @@ module.exports = {
 			in_stock: { type: Sequelize.INTEGER },
 			popularity: { type: Sequelize.INTEGER },
 			compatibility: { type: Sequelize.STRING(2048) },
-			createdAt: {
+			created_at: {
 				allowNull: false,
 				type: Sequelize.DATE
 			},
-			updatedAt: {
+			update_at: {
 				allowNull: false,
 				type: Sequelize.DATE
 			}
