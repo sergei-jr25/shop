@@ -1,5 +1,4 @@
 const { faker } = require('@faker-js/faker')
-const image = require('./uploads/default/indiana.png')
 
 ;('use strict')
 
