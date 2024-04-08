@@ -11,8 +11,8 @@ export const getTypeOrmConfig = async (
 	port: 5432,
 	password: configServer.get('POSTGRES_PASSWORD'),
 	autoLoadEntities: true,
-	synchronize: true,
-	ssl: true
+	synchronize: true
+	// ssl: configServer.get('POSTGRES_SSl')
 })
 
 // export const getTypeOrmConfig = async (

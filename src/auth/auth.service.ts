@@ -103,14 +103,14 @@ export class AuthService {
 		})
 
 		const accessToken = await this.jwtService.signAsync(data, {
-			expiresIn: '1h'
+			expiresIn: '7d'
 		})
 
 		return { refreshToken, accessToken }
 	}
 
 	async chagngeUser(id: number) {
-		const user  = await this.userRepository.find({where: {id}})
+		const user = await this.userRepository.find({ where: { id } })
 	}
 
 	returnUserFields(user: UserEntity) {

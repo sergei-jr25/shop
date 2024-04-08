@@ -16,11 +16,8 @@ export class ShoppingCartController {
 		return this.shoppingCartService.create(dto)
 	}
 	@Put('count/:partId')
-	updateCount(
-		@Body() { count }: { count: number },
-		@Param('partId') partId: number
-	) {
-		return this.shoppingCartService.updateCount(partId, count)
+	updateCount(@Param('partId') partId: number, @Body() type: 'plus' | 'minus') {
+		return this.shoppingCartService.updateCount(partId, type)
 	}
 	@Put('total-price/:id')
 	updateTotalPrice(
@@ -30,8 +27,8 @@ export class ShoppingCartController {
 		return this.shoppingCartService.updateTotalPrice(totalPrice, partId)
 	}
 
-	@Delete('remove/:id')
-	remove(@Param('id') partId: number) {
+	@Delete('remove/:partId')
+	remove(@Param('partId') partId: number) {
 		return this.shoppingCartService.remove(partId)
 	}
 
